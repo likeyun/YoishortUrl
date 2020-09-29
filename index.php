@@ -17,6 +17,9 @@ if (trim(empty($dwzkey))) {
 	if ($conn->connect_error) {
 		echo "数据库连接失败，原因：".$conn->connect_error;
 	} else {
+		// 更新访问量
+		mysqli_query($conn,"UPDATE $table pageview=pageview+1 WHERE dwzkey='$dwzkey'");
+		
 		//检查数据库是否存在该dwzkey
 		$checkKey = "SELECT * FROM $table WHERE dwzkey = '$dwzkey'";
 		$result_checkKey = $conn->query($checkKey);
