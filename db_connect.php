@@ -4,5 +4,5 @@
 	$db_pwd = "xx"; // 数据库密码
 	$db_name = "xx"; // 数据库名
 	$server_path = "xx"; //短网址域名和代码所在目录
-	$table = "xxx"; // 短网址数据表名
+	$table = "xx"; // 短网址数据表名
 ?>
